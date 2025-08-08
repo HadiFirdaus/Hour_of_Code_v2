@@ -1,0 +1,32 @@
+# Unreal Engine build folder
+
+Binaries/
+DerivedDataCache/
+Intermediate/
+Saved/
+Build/
+
+# IDE and workspace files
+
+.vscode/
+.vs/
+*.suo
+*.user
+*.userprefs
+*.VS.db
+*.opendb
+*.log
+
+# Compiled binaries
+
+*.exe
+*.dll
+*.pdb
+*.app
+*.dylib
+*.so
+
+# Backup and cache files
+
+*_BuiltData.uasset
+
