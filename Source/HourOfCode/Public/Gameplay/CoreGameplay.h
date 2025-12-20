@@ -14,6 +14,14 @@ class HOUROFCODE_API ACoreGameplay : public AActor
 public:	
 	// Sets default values for this actor's properties
 	ACoreGameplay();
+	
+	class USceneComponent* RootScene;
+	class UStaticMeshComponent* StaticMeshRoot;
+	class USphereComponent* SphereComRoot;
+	class UTextRenderComponent* TextRenderRoot;
+	
+	UPROPERTY(EditAnywhere, Category = "CoreGameplay")
+	FName GameplayName = "Gameplay";
 
 protected:
 	// Called when the game starts or when spawned
