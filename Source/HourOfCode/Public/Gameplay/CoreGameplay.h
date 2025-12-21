@@ -15,12 +15,16 @@ public:
 	// Sets default values for this actor's properties
 	ACoreGameplay();
 	
+	UPROPERTY(EditDefaultsOnly)
 	class USceneComponent* RootScene;
+	UPROPERTY(EditDefaultsOnly)
 	class UStaticMeshComponent* StaticMeshRoot;
+	UPROPERTY(EditDefaultsOnly)
 	class USphereComponent* SphereComRoot;
+	UPROPERTY(EditDefaultsOnly)
 	class UTextRenderComponent* TextRenderRoot;
 	
-	UPROPERTY(EditAnywhere, Category = "CoreGameplay")
+	UPROPERTY(EditDefaultsOnly, Category = "CoreGameplay")
 	FName GameplayName = "Gameplay";
 
 protected:

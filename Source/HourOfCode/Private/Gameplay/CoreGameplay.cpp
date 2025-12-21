@@ -16,7 +16,11 @@ ACoreGameplay::ACoreGameplay()
 	SphereComRoot = CreateDefaultSubobject<USphereComponent>("SphereComRoot");
 	TextRenderRoot = CreateDefaultSubobject<UTextRenderComponent>("TextRenderRoot");
 	
-	RootScene = RootComponent;
+	RootComponent = RootScene;
+	StaticMeshRoot->SetupAttachment(RootScene);
+	SphereComRoot->SetupAttachment(RootScene);
+	TextRenderRoot->SetupAttachment(RootScene);
+	
 }
 
 // Called when the game starts or when spawned
