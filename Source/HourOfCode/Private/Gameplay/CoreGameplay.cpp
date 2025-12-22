@@ -27,7 +27,7 @@ ACoreGameplay::ACoreGameplay()
 void ACoreGameplay::BeginPlay()
 {
 	Super::BeginPlay();
-	UE_LOG(LogTemp, Warning, TEXT("Hello World"));
+	UE_LOG(LogTemp, Warning, TEXT("CoreGameplay++"));
 	if (SphereComRoot != nullptr)
 	{
 		SphereComRoot->OnComponentBeginOverlap.AddDynamic(this, &ACoreGameplay::SphereBeginOverlap);
