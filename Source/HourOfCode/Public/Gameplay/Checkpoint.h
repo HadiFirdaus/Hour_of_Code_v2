@@ -24,10 +24,12 @@ public:
 	class UStaticMeshComponent* SM_ButtonARing;
 	UPROPERTY(EditDefaultsOnly)
 	class UArrowComponent* Arrow;
-	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category="Checkpoint++")
 	bool CheckpointEnabled = false;
 	UPROPERTY(EditDefaultsOnly)
 	class UPaperSpriteComponent* CheckpointTransform;
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category="Checkpoint++")
+	class UMaterialInstanceDynamic* Dynamic_MI_Ref;
 	
 protected:
 	

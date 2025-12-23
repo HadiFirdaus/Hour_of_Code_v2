@@ -4,6 +4,7 @@
 #include "Gameplay/CoreGameplay.h"
 #include "Components/SphereComponent.h"
 #include "Components/TextRenderComponent.h"
+#include "Core/EpicCharacter.h"
 
 // Sets default values
 ACoreGameplay::ACoreGameplay()
@@ -43,7 +44,14 @@ void ACoreGameplay::Tick(float DeltaTime)
 
 void ACoreGameplay::SphereBeginOverlap(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
-	
+	if (OtherActor != nullptr)
+	{
+		class AEpicCharacter* EpicChar = Cast<AEpicCharacter>(OtherActor);
+		if (EpicChar != nullptr)
+		{
+			ExecuteBeginOverlap(EpicChar);
+		}
+	}
 }
 
 void ACoreGameplay::SphereEndOverlap(UPrimitiveComponent* OverlappedComp, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex)

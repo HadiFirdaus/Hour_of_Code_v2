@@ -17,14 +17,14 @@ public:
 	
 	UPROPERTY(EditDefaultsOnly)
 	class USceneComponent* RootScene;
-	UPROPERTY(EditDefaultsOnly)
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "CoreGameplay++")
 	class UStaticMeshComponent* StaticMeshRoot;
 	UPROPERTY(EditDefaultsOnly)
 	class USphereComponent* SphereComRoot;
 	UPROPERTY(EditDefaultsOnly)
 	class UTextRenderComponent* TextRenderRoot;
 	
-	UPROPERTY(EditDefaultsOnly, Category = "CoreGameplay")
+	UPROPERTY(EditDefaultsOnly, Category = "CoreGameplay++")
 	FName GameplayName = "Gameplay";
 
 protected:
@@ -40,5 +40,7 @@ protected:
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
-
+	
+	UFUNCTION(BlueprintImplementableEvent, Category="CoreGameplay++")
+	void ExecuteBeginOverlap(AActor* OtherActor);
 };

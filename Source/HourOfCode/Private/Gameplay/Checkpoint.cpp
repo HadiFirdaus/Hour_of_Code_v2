@@ -20,7 +20,7 @@ ACheckpoint::ACheckpoint()
 void ACheckpoint::BeginPlay()
 {
 	Super::BeginPlay();
-	UE_LOG(LogTemp, Warning, TEXT("Checkpoint++"));
+	/*UE_LOG(LogTemp, Warning, TEXT("Checkpoint++"));*/
 }
 
 void ACheckpoint::Tick(float DeltaTime)
