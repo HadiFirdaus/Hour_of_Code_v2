@@ -3,15 +3,18 @@
 
 #include "Gameplay/Checkpoint.h"
 #include "Components/ArrowComponent.h"
+#include "PaperSpriteComponent.h"
 
 ACheckpoint::ACheckpoint()
 {
 	SM_ButtonARing = CreateDefaultSubobject<UStaticMeshComponent>("SM_ButtonARing");
 	Arrow = CreateDefaultSubobject<UArrowComponent>("Arrow");
+	CheckpointTransform = CreateDefaultSubobject<UPaperSpriteComponent>("CheckpointTransform");
 	
 	RootComponent = RootScene;
 	SM_ButtonARing->SetupAttachment(StaticMeshRoot);
 	Arrow->SetupAttachment(RootScene);
+	CheckpointTransform->SetupAttachment(RootScene);
 }
 
 void ACheckpoint::BeginPlay()
