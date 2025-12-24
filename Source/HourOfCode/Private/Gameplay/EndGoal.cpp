@@ -20,6 +20,7 @@ void AEndGoal::BeginPlay()
 {
 	Super::BeginPlay();
 	UE_LOG(LogTemp, Warning, TEXT("EndGoal++"));
+	PlayTheShardAnimation();
 }
 
 void AEndGoal::Tick(float DeltaTime)

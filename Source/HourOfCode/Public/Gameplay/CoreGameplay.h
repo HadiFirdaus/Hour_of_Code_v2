@@ -43,4 +43,13 @@ public:
 	
 	UFUNCTION(BlueprintImplementableEvent, Category="CoreGameplay++")
 	void ExecuteBeginOverlap(AActor* OtherActor);
+	
+	UFUNCTION()
+	class AEpicGameMode* GetEpicGameMode() const;
+	
+private:
+	
+	UPROPERTY()
+	class AEpicGameMode* EpicGameMode;
+	
 };

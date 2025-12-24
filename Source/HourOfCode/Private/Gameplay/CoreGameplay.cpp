@@ -22,6 +22,7 @@ ACoreGameplay::ACoreGameplay()
 	SphereComRoot->SetupAttachment(RootScene);
 	TextRenderRoot->SetupAttachment(RootScene);
 	
+	
 }
 
 // Called when the game starts or when spawned
@@ -57,4 +58,10 @@ void ACoreGameplay::SphereBeginOverlap(UPrimitiveComponent* OverlappedComp, AAct
 void ACoreGameplay::SphereEndOverlap(UPrimitiveComponent* OverlappedComp, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex)
 {
 	
+}
+
+AEpicGameMode* ACoreGameplay::GetEpicGameMode() const
+{
+	class AEpicGameMode* Egm = EpicGameMode;
+	return Egm;
 }

@@ -16,14 +16,16 @@ public:
 	
 	virtual void Tick(float DeltaTime) override;
 	
-	UPROPERTY(EditDefaultsOnly)
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category="EndGoal++")
 	class UStaticMeshComponent* StaticMeshShard01;
-	UPROPERTY(EditDefaultsOnly)
+	UPROPERTY(EditDefaultsOnly ,BlueprintReadWrite, Category="EndGoal++")
 	class UStaticMeshComponent* StaticMeshShard02;
-	UPROPERTY(EditDefaultsOnly)
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category="EndGoal++")
 	class UStaticMeshComponent* StaticMeshShard03;
 	
 protected:
 	virtual void BeginPlay() override;
 	
+	UFUNCTION(BlueprintImplementableEvent, Category="EndGoal++")
+	void PlayTheShardAnimation();
 };
